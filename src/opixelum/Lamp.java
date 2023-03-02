@@ -3,6 +3,7 @@ package opixelum;
 public class Lamp {
     private static final Integer MIN_BRIGHTNESS = 0;
     private static final Integer MAX_BRIGHTNESS = 100;
+
     private Boolean isOn;
     private Integer brightness;
 
