@@ -35,8 +35,19 @@ public class Lamp {
         return brightness;
     }
 
-    public void setOn(Boolean on) {
-        isOn = on;
+    public void switchOn() {
+        isOn = true;
+        brightness = MAX_BRIGHTNESS;
+    }
+
+    public void switchOn(Integer brightness) {
+        isOn = true;
+        this.brightness = brightness;
+    }
+
+    public void switchOff() {
+        isOn = false;
+        brightness = MIN_BRIGHTNESS;
     }
 
     public void setBrightness(Integer brightness) {
