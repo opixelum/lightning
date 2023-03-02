@@ -24,4 +24,10 @@ public class Switch {
     public void setLamp2(Lamp lamp2) {
         this.lamp2 = lamp2;
     }
+
+    public void lampsStatus() {
+        String lamp1Status = "Lamp1:\n\tisOn: " + lamp1.isOn() + "\n\tbrightness: " + lamp1.getBrightness() + "\n";
+        String lamp2Status = "Lamp2:\n\tisOn: " + lamp2.isOn() + "\n\tbrightness: " + lamp2.getBrightness() + "\n";
+        System.out.print(lamp1Status + lamp2Status);
+    }
 }
