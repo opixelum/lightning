@@ -40,9 +40,12 @@ public class Lamp {
         brightness = MAX_BRIGHTNESS;
     }
 
+    private Boolean isBrightnessValid(Integer brightness) {
+        return (brightness > MIN_BRIGHTNESS && brightness <= MAX_BRIGHTNESS);
+    }
     public void switchOn(Integer brightness) {
-        isOn = true;
-        this.brightness = brightness;
+        isOn = isBrightnessValid(brightness);
+        this.brightness = isOn ? brightness : MIN_BRIGHTNESS;
     }
 
     public void switchOff() {
