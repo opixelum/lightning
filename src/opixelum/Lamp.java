@@ -1,10 +1,10 @@
 package opixelum;
 
 public class Lamp {
-    private boolean isOn;
+    private Boolean isOn;
     private Integer brightness;
 
-    public Lamp(boolean isOn) {
+    public Lamp(Boolean isOn) {
         this.isOn = isOn;
 
         if (isOn) {
@@ -24,7 +24,7 @@ public class Lamp {
         }
     }
 
-    public boolean isOn() {
+    public Boolean isOn() {
         return isOn;
     }
 
@@ -32,7 +32,7 @@ public class Lamp {
         return brightness;
     }
 
-    public void setOn(boolean on) {
+    public void setOn(Boolean on) {
         isOn = on;
     }
 
