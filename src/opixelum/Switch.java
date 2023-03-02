@@ -1,5 +1,7 @@
 package opixelum;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Switch {
     private Lamp lamp1;
     private Lamp lamp2;
@@ -29,5 +31,9 @@ public class Switch {
         String lamp1Status = "Lamp1:\n\tisOn: " + lamp1.isOn() + "\n\tbrightness: " + lamp1.getBrightness() + "\n";
         String lamp2Status = "Lamp2:\n\tisOn: " + lamp2.isOn() + "\n\tbrightness: " + lamp2.getBrightness() + "\n";
         System.out.print(lamp1Status + lamp2Status);
+    }
+
+    public void switchLampOn(@NotNull Lamp lamp, Integer brightness) {
+        lamp.switchOn(brightness);
     }
 }
