@@ -3,10 +3,18 @@ package opixelum;
 public class Main {
     public static void main(String[] args) {
         Lamp lamp1 = new Lamp(false);
-        Lamp lamp2 = new Lamp(0);
+        Lamp lamp2 = new Lamp(false);
         Switch sw = new Switch(lamp1, lamp2);
 
-        System.out.println("Lamp 1:\n\tOn: " + sw.getLamp1().isOn() + "\n\tBrightness: " + sw.getLamp1().getBrightness());
-        System.out.println("Lamp 2:\n\tOn: " + sw.getLamp2().isOn() + "\n\tBrightness: " + sw.getLamp2().getBrightness());
+        sw.lampsStatus();
+
+        sw.switchLampOn(lamp1, 100);
+        sw.lampsStatus();
+
+        sw.switchLampOn(lamp2, 100);
+        sw.lampsStatus();
+
+        sw.switchLampOn(lamp1, 50);
+        sw.lampsStatus();
     }
 }
