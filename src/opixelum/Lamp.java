@@ -6,10 +6,22 @@ public class Lamp {
 
     public Lamp(boolean isOn) {
         this.isOn = isOn;
+
+        if (isOn) {
+            this.brightness = 100;
+        } else {
+            this.brightness = 0;
+        }
     }
 
     public Lamp(Integer brightness) {
         this.brightness = brightness;
+
+        if (brightness > 0) {
+            this.isOn = true;
+        } else {
+            this.isOn = false;
+        }
     }
 
     public boolean isOn() {
