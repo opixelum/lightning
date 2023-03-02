@@ -1,6 +1,8 @@
 package opixelum;
 
 public class Lamp {
+    private static final Integer MIN_BRIGHTNESS = 0;
+    private static final Integer MAX_BRIGHTNESS = 100;
     private Boolean isOn;
     private Integer brightness;
 
@@ -8,16 +10,16 @@ public class Lamp {
         this.isOn = isOn;
 
         if (isOn) {
-            this.brightness = 100;
+            this.brightness = MAX_BRIGHTNESS;
         } else {
-            this.brightness = 0;
+            this.brightness = MIN_BRIGHTNESS;
         }
     }
 
     public Lamp(Integer brightness) {
         this.brightness = brightness;
 
-        if (brightness > 0) {
+        if (brightness > MIN_BRIGHTNESS) {
             this.isOn = true;
         } else {
             this.isOn = false;
